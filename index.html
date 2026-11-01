@@ -15,8 +15,8 @@
         window.location.replace(destination);
       }
 
-      // Safety fallback if the Pixel callback does not arrive.
-      var fallbackTimer = window.setTimeout(goToTelegram, 1500);
+      // Redirect after 100ms if the Pixel callback has not arrived.
+      var fallbackTimer = window.setTimeout(goToTelegram, 100);
 
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -34,7 +34,7 @@
           window.clearTimeout(fallbackTimer);
           goToTelegram();
         },
-        eventTimeout: 1200
+        eventTimeout: 1000
       });
     })();
   </script>
