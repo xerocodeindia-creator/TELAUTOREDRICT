@@ -19,7 +19,10 @@
     fbq('init', '1360885335597921');
     fbq('track', 'PageView');
 
-    // Briefly allow the PageView request to start before navigating.
+    // Record that the automatic Telegram redirect is being initiated.
+    fbq('trackCustom', 'TelegramRedirect');
+
+    // Give the Pixel requests a brief opportunity to start before navigation.
     window.setTimeout(function () {
       window.location.replace('https://t.me/Growithaarohibot');
     }, 500);
