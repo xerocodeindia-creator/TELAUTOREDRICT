@@ -15,8 +15,8 @@
         window.location.replace(destination);
       }
 
-      // Redirect immediately; Pixel delivery is not guaranteed at 0ms.
-      window.setTimeout(goToTelegram, 0);
+      // Redirect after 50ms.
+      window.setTimeout(goToTelegram, 50);
 
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
