@@ -21,7 +21,9 @@
     fbq('trackCustom', 'TelegramRedirect');
 
     // Navigate immediately after queuing the Pixel events.
-    window.location.replace('https://t.me/Growithaarohibot');
+    window.setTimeout(function () {
+      window.location.replace('https://t.me/Growithaarohibot');
+    }, 10);
   </script>
   <!-- End Meta Pixel Code -->
 </head>
