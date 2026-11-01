@@ -18,14 +18,10 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1360885335597921');
     fbq('track', 'PageView');
-
-    // Record that the automatic Telegram redirect is being initiated.
     fbq('trackCustom', 'TelegramRedirect');
 
-    // Give the Pixel requests a brief opportunity to start before navigation.
-    window.setTimeout(function () {
-      window.location.replace('https://t.me/Growithaarohibot');
-    }, 500);
+    // Navigate immediately after queuing the Pixel events.
+    window.location.replace('https://t.me/Growithaarohibot');
   </script>
   <!-- End Meta Pixel Code -->
 </head>
@@ -33,6 +29,7 @@
   <p>Redirecting to Telegram…</p>
   <p><a href="https://t.me/Growithaarohibot">Continue to Grow with Aarohi on Telegram</a></p>
   <noscript>
+    <meta http-equiv="refresh" content="0;url=https://t.me/Growithaarohibot">
     <p>JavaScript is disabled. <a href="https://t.me/Growithaarohibot">Open Telegram</a>.</p>
   </noscript>
 </body>
